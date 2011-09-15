@@ -3,13 +3,11 @@
 <head>
   <title>Equipeimmobiliere</title>
   <%= stylesheet_link_tag    "application" %>
-
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-Equipe Immobiliere
-
+              Equipe Immobiliere
 <% if session[:user_id] %>
     <ul>
       <li><%= link_to 'Users',	users_path	%></li>
