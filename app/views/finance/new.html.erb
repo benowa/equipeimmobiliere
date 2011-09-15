@@ -1,10 +1,10 @@
-<div class="depot_form">
+<div class="equipeimmobiliere_form">
   <% if flash[:alert] %>
     <p id="notice"><%= flash[:alert] %></p>
   <% end %>
 
 <%= form_tag do %>
-      <fieldset>
+    <fieldset>
         <legend>Finance analysis</legend>
         <div>
           <label for="f1">f1:</label>
@@ -18,7 +18,8 @@
             <%= submit_tag "calculate" %>
         </div>
     </fieldset>
-  <% end %>
-</div>
+<% end %>
+
 
 <%= render :partial => "clients/form", :object => @client %>
+</div>

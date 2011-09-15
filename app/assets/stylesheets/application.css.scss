@@ -53,31 +53,6 @@
       font-size: small;
     }
 
-/* START_HIGHLIGHT */
-    #cart {
-      font-size: smaller;
-      color:     white;
-
-      table {
-        border-top:    1px dotted #595;
-        border-bottom: 1px dotted #595;
-        margin-bottom: 10px;
-      }
-    }
-
-/* END_HIGHLIGHT */
-    ul {
-      padding: 0;
-
-      li {
-        list-style: none;
-
-        a {
-          color: #bfb;
-          font-size: small;
-        }
-      }
-    }
   }
 //#END:side
 }
@@ -85,11 +60,11 @@
 //#START:form
 .equipeimmobiliere_form {
   fieldset {
-    background: #efe;
+    background: #f7f7f7;
 
     legend {
-      color: #dfd;
-      background: #141;
+      color: #eee;
+      background: #111;
       font-family: sans-serif;
       padding: 0.2em 1em;
     }
