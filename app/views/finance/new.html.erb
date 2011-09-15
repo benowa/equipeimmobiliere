@@ -6,6 +6,7 @@
 <%= form_tag do %>
     <fieldset>
         <legend>Finance analysis</legend>
+        <div id="finance_left">
         <div>
           <label for="f1">f1:</label>
           <%= text_field_tag :f1, params[:f1] %>
@@ -15,8 +16,33 @@
           <%= text_field_tag :f2, params[:f2] %>
         </div>
         <div>
-            <%= submit_tag "calculate" %>
+          <label for="f3">f3:</label>
+          <%= text_field_tag :f3, params[:f3] %>
         </div>
+        <div>
+          <label for="f4">f4:</label>
+          <%= text_field_tag :f4, params[:f4] %>
+        </div>
+        </div>
+        <div id="finance_right">
+        <div>
+          <label for="f1">f1:</label>
+          <%= text_field_tag :f1, params[:f1] %>
+        </div>
+        <div>
+          <label for="f2">f2:</label>
+          <%= text_field_tag :f2, params[:f2] %>
+        </div>
+        <div>
+          <label for="f3">f3:</label>
+          <%= text_field_tag :f3, params[:f3] %>
+        </div>
+        <div>
+          <label for="f4">f4:</label>
+          <%= text_field_tag :f4, params[:f4] %>
+        </div>
+        </div>
+
     </fieldset>
 <% end %>
 
