@@ -1,4 +1,6 @@
 Equipeimmobiliere::Application.routes.draw do
+  resources :clients
+
   get 'admin' => 'admin#index'
   get 'finance' => 'finance#new'
 
