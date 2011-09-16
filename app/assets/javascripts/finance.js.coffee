@@ -4,3 +4,4 @@
 
 $(document).ready ->
   $('#notice').delay(5000).fadeOut(4000);
+  $('#error_explanation').delay(5000).fadeOut(4000);
