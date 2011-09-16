@@ -7,6 +7,8 @@
  *= require_self
  *= require_tree . 
 */
+
+
 #banner {
   background: #9c9;
   padding: 10px;
@@ -29,14 +31,31 @@
   font: bold smaller sans-serif;
 }
 
-#columns {
-  background: #141;
+
 
   #main {
-    margin-left: 17em;
-    padding: 1em;
     background: white;
+    width: 800px;
+    position: relative;
+    padding: 0 10px 10px;
+    border-left: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 900px;
   }
+
+  #site_message {
+    background: #111111;
+    margin: 0 -10px;
+    padding: 10px 40px;
+    color: white;
+    text-align: center;
+    font-family: Arial;
+    font-size: 13px;
+    border-bottom: 1px solid #222;
+}
 
   //#START:side
 #side {
@@ -55,13 +74,13 @@
 
   }
 //#END:side
-}
 
 //#START:form
 .equipeimmobiliere {
   fieldset {
     background: #f7f7f7;
     margin-bottom: 1em;
+    margin-top: 1em;
 
     legend {
       color: #eee;

@@ -22,8 +22,11 @@
     <%= f.email_field :email, size: 40 %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= submit_tag("Send email") %>
   </div>
+    <% if notice %>
+      <p id="notice"><%= notice %></p>
+    <% end %>
   </fieldset>
 
 <% end %>

@@ -1,5 +1,5 @@
 class ClientsController < ApplicationController
-  skip_before_filter :authorize, only: [:create, :new]
+  skip_before_filter :authorize, only: [:create, ]
   # GET /clients
   # GET /clients.json
   def index
@@ -45,7 +45,7 @@ class ClientsController < ApplicationController
 
     respond_to do |format|
       if @client.save
-        format.html { redirect_to @client, notice: 'Client was successfully created.' }
+        format.html { redirect_to :back, notice: 'email was successfully sent.' }
         format.json { render json: @client, status: :created, location: @client }
       else
         format.html { render action: "new" }
