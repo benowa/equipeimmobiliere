@@ -48,7 +48,7 @@ class ClientsController < ApplicationController
         format.html { redirect_to :back, notice: 'email was successfully sent.' }
         format.json { render json: @client, status: :created, location: @client }
       else
-        format.html { render action: "new" }
+        format.html { render  "finance/new" }
         format.json { render json: @client.errors, status: :unprocessable_entity }
       end
     end

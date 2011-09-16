@@ -1,15 +1,5 @@
 <%= form_for(@client) do |f| %>
-  <% if @client.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@client.errors.count, "error") %> prohibited this client from being saved:</h2>
 
-      <ul>
-      <% @client.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 
   <fieldset>
   <legend>To obtain a pdf summary by email</legend>
@@ -24,9 +14,23 @@
   <div class="actions">
     <%= submit_tag("Send email") %>
   </div>
+
     <% if notice %>
       <p id="notice"><%= notice %></p>
     <% end %>
+
+    <% if @client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@client.errors.count, "error") %> prohibited this client from being saved:</h2>
+
+      <ul>
+      <% @client.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   </fieldset>
 
 <% end %>
