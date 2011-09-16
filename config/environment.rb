@@ -5,14 +5,14 @@ require File.expand_path('../application', __FILE__)
 Equipeimmobiliere::Application.initialize!
 
 Equipeimmobiliere::Application.configure do
-config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.raise_delivery_errors = true
 
 # Mailer delivery method
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
     address:              "smtp.gmail.com",
-    port:                 587,
+    port:                 25,
     domain:               "domain.of.sender.net",
     authentication:       "plain",
     user_name:            "benowa.desu",
