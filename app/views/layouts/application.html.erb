@@ -3,20 +3,15 @@
 <head>
   <title>Equipeimmobiliere</title>
   <%= stylesheet_link_tag    "application" %>
-
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-              Equipe Immobiliere
-<% if session[:user_id] %>
-    <ul>
-      <li><%= link_to 'Users',	users_path	%></li>
-    </ul>
-    <%= button_to 'Logout', logout_path, method: :delete	%>
-<% end %>
+           <h3>L'Équipe Immobilière</h3>
 
+<div class="equipeimmobiliere">
 <%= yield %>
+</div>
 
 </body>
 </html>

@@ -1,4 +1,6 @@
-<h1>Listing clients</h1>
+<fieldset>
+        <legend>listing clients</legend>
+
 
 <table>
   <tr>
@@ -13,13 +15,17 @@
   <tr>
     <td><%= client.name %></td>
     <td><%= client.email %></td>
-    <td><%= link_to 'Show', client %></td>
-    <td><%= link_to 'Edit', edit_client_path(client) %></td>
     <td><%= link_to 'Destroy', client, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
+</fieldset>
+
+
+
 <br />
 
-<%= link_to 'New Client', new_client_path %>
+<br />
+
+ <%= link_to 'Back to admin page', admin_path	%>
