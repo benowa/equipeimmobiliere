@@ -46,7 +46,7 @@ Equipeimmobiliere::Application.configure do
   # config.assets.precompile += %w( search.js )
 
   # Disable delivery errors, bad email addresses will be ignored
-  # config.action_mailer.raise_delivery_errors = false
+   config.action_mailer.raise_delivery_errors = true
 
   # Enable threaded mode
   # config.threadsafe!
@@ -57,4 +57,18 @@ Equipeimmobiliere::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+
+  # Mailer delivery method
+  # Mailer delivery method
+  config.action_mailer.delivery_method = :smtp
+
+    config.action_mailer.smtp_settings = {
+      address: "smtp.gmail.com",
+      port: 587,
+      domain:  "domain.of.sender.net",
+      authentication: "plain",
+      user_name: 'benowa.desu',
+      password: 'Brussel3',
+      enable_starttls_auto: true
+  }
 end
