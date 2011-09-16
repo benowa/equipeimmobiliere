@@ -45,7 +45,8 @@ class ClientsController < ApplicationController
 
     respond_to do |format|
       if @client.save
-        format.html { redirect_to :back, notice: 'email was successfully sent.' }
+        ClientNotifier.summary(@client).deliver
+        format.html { redirect_to finance_url, notice: 'email was successfully sent.' }
         format.json { render json: @client, status: :created, location: @client }
       else
         format.html { render  "finance/new" }
