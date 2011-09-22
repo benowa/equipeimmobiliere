@@ -34,8 +34,9 @@
 
 
   #main {
+    padding-top: 40px;
     background: white;
-    width: 800px;
+    width: 940px;
     position: relative;
     padding: 0 10px 10px;
     border-left: 1px solid #CCC;
@@ -84,7 +85,7 @@
 
     legend {
       color: #fff;
-      background: #F15555;
+      background: #333;
       font-family: sans-serif;
       padding: 0.2em 1em;
     }
