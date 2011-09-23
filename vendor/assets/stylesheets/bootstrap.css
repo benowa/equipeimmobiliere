@@ -642,6 +642,7 @@ select,
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+
 }
 /* mini reset for non-html5 file types */
 input[type=checkbox], input[type=radio] {
@@ -689,6 +690,7 @@ textarea {
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
   cursor: not-allowed;
+
 }
 :-moz-placeholder {
   color: #bfbfbf;

@@ -32,17 +32,35 @@
         </div>
         <div>
           <label for="f2">f2:</label>
+
           <%= text_field_tag :f2, params[:f2] %>
+          <a href="#" class="btn danger" rel="popover" title="ce nombre" data-content="ce nombre est le calcul du revenu net">?</a>
+          <script>
+            $(function () {
+              $("a[rel=popover]")
+                .popover({
+                  offset: 10
+                })
+                .click(function(e) {
+                  e.preventDefault()
+                })
+            })
+          </script>
         </div>
         <div>
           <label for="f3">f3:</label>
-          <%= text_field_tag :f3, params[:f3] %>
+          <div class="input">
+              <input class="xlarge span2" id="xlInput" name="xlInput" size="30" type="text">
+            </div>
+
+          <div>
+          <label for="f4">result:</label>
+                                      <div class="input">
+            <span class="uneditable-input ">result</span>
+                                        <div/>
+          </div>
         </div>
-        <div>
-          <label for="f4">f4:</label>
-          <%= text_field_tag :f4, params[:f4] %>
-        </div>
-        </div>
+
 
     </fieldset>
 <% end %>
