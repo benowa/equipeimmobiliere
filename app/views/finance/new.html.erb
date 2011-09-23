@@ -6,24 +6,40 @@
 
 <%= form_tag do %>
     <fieldset>
-        <legend>Financial analysis</legend>
+        <legend>Revenus / Dépenses</legend>
         <div id="finance_left">
-        <div>
-          <label for="f1">f1:</label>
-          <%= text_field_tag :f1, params[:f1] %>
+        <div class="clearfix">
+          <label for="loyers_residentiels">Loyers Résidentiels:</label>
+          <div class="input">
+          <input class="xlarge span2" id="loyers_residentiels" name="loyers_residentiels" size="30" type="text">
+          </div>
         </div>
-        <div>
-          <label for="f2">f2:</label>
-          <%= text_field_tag :f2, params[:f2] %>
+        <div class="clearfix">
+          <label for="loyers_commerciaux">Loyers Commerciaux:</label>
+          <div class="input">
+          <input class="xlarge span2" id="loyers_commerciaux" name="loyers_commerciaux" size="30" type="text">
+          </div>
         </div>
-        <div>
-          <label for="f3">f3:</label>
-          <%= text_field_tag :f3, params[:f3] %>
+        <div class="clearfix">
+          <label for="buanderie">Buanderie:</label>
+          <div class="input">
+          <input class="xlarge span2" id="buanderie" name="buanderie" size="30" type="text">
+          </div>
         </div>
-        <div>
-          <label for="f4">f4:</label>
-          <%= text_field_tag :f4, params[:f4] %>
+        <div class="clearfix">
+          <label for="tationnements">Stationnements:</label>
+          <div class="input">
+          <input class="xlarge span2" id="stationnements" name="stationnements" size="30" type="text">
+          </div>
         </div>
+        <div class="clearfix">
+          <label for="revenu_potentiel_brut">Revenu Potentiel Brut:</label>
+          <div class="input">
+          <input class="xlarge span2" id="revenu_potentiel_brut" name="revenu_potentiel_brut" size="30" type="text">
+          </div>
+        </div>
+
+
         </div>
         <div id="finance_right">
         <div>
@@ -52,14 +68,14 @@
           <div class="input">
               <input class="xlarge span2" id="xlInput" name="xlInput" size="30" type="text">
           </div>
-
-          <div>
+        </div>
+        <div>
           <label for="f4">result:</label>
           <div class="input">
                <input class="xlarge span2" id="xlInput2" name="xlInput" size="30" type="text">
-          <div/>
           </div>
         </div>
+
 
 
     </fieldset>

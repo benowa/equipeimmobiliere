@@ -23,7 +23,7 @@ h5,
 h6,
 p,
 blockquote,
-pre,
+pre,                                                                              Fin
 a,
 abbr,
 acronym,
@@ -591,7 +591,7 @@ fieldset legend {
 
 }
 form .clearfix {
-  margin-bottom: 18px;
+  margin-bottom: 10px;
   zoom: 1;
 }
 form .clearfix:before, form .clearfix:after {
@@ -617,12 +617,12 @@ label {
   font-size: 13px;
   line-height: 18px;
   float: left;
-  width: 130px;
+  width: 160px;
   text-align: right;
   color: #404040;
 }
 form .input {
-
+   margin-left: 15px;
 }
 input[type=checkbox], input[type=radio] {
   cursor: pointer;
