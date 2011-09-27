@@ -4,20 +4,22 @@
   <% end %>
 
 
-<%= form_tag do %>
+
+
+<%= form_tag '', :method => :get, :id => "revenus_depenses"  do %>
     <fieldset>
         <legend>Revenus / Dépenses</legend>
         <div id="finance_left">
         <div class="clearfix">
           <label for="loyers_residentiels">Loyers Résidentiels:</label>
           <div class="input">
-          <input class="xlarge span2" id="loyers_residentiels" name="loyers_residentiels" size="30" type="text">
+          <input class="xlarge span2" id="loyers_residentiels" name="loyers_residentiels" size="30" type="text" value="0">
           </div>
         </div>
         <div class="clearfix">
-          <label for="loyers_commerciaux">Loyers Commerciaux:</label>
+          <label for="loyers_commerciaux" >Loyers Commerciaux:</label>
           <div class="input">
-          <input class="xlarge span2" id="loyers_commerciaux" name="loyers_commerciaux" size="30" type="text">
+          <input class="xlarge span2" id="loyers_commerciaux" name="loyers_commerciaux" size="30" type="text" value="0">
           </div>
         </div>
         <div class="clearfix">
@@ -37,7 +39,56 @@
           <div class="input">
           <input class="xlarge span2" id="revenu_potentiel_brut" name="revenu_potentiel_brut" size="30" type="text">
           </div>
+           <p></p>
+          <div id="bla"></div>
+
         </div>
+
+          <script>
+
+             $("#revenus_depenses").change(function () {
+
+
+
+             $("#revenus_depenses").validate( {
+                 focusCleanup: true,
+                 errorElement: "em",
+             rules: {
+               // simple rule, converted to {required:true}
+               loyers_residentiels: {
+                   required: true,
+                   digits: true
+
+               },
+               // compound rule
+               loyers_commerciaux: {
+                 required: true,
+                 digits: true
+               }
+               },
+                 messages: {
+               loyers_residentiels: {required: "Please enter a number" ,
+                   digits: "seulement les chiffres sont acceptes"
+                 }
+                 }
+
+          }   );
+
+               if  ($("#revenus_depenses").valid()){
+                       var value = $("#loyers_commerciaux").val();
+                       var value2 = $("#loyers_residentiels").val();
+
+                      $("p").text(parseInt(value)+parseInt(value2));
+
+               } else{
+                      $("p").text("0")
+
+               }
+                     });
+
+
+                    </script>
+
 
 
         </div>
