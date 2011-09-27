@@ -102,8 +102,24 @@
       display: block;
     }
 
+    label.error {
+      width: 20em;
+      float: right;
+      color: red;
+      padding-left: .5em;
+      vertical-align: top;
+    }
+     label.result {
+      width: 20em;
+      float: right;
+      color: green;
+      padding-left: .5em;
+      vertical-align: top;
+    }
+
     select, textarea, input {
       margin-left: 0.5em;
+      text-align: right;
     }
 
     .submit {

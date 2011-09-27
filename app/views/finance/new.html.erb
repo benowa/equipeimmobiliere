@@ -37,10 +37,10 @@
         <div class="clearfix">
           <label for="revenu_potentiel_brut">Revenu Potentiel Brut:</label>
           <div class="input">
-          <input class="xlarge span2" id="revenu_potentiel_brut" name="revenu_potentiel_brut" size="30" type="text">
+          <input class="xlarge span2 disabled" id="revenu_potentiel_brut" name="revenu_potentiel_brut" size="30" type="text"  disabled/>
           </div>
-           <p></p>
-          <div id="bla"></div>
+
+
 
         </div>
 
@@ -51,39 +51,66 @@
 
 
              $("#revenus_depenses").validate( {
-                 focusCleanup: true,
-                 errorElement: "em",
+
              rules: {
-               // simple rule, converted to {required:true}
-               loyers_residentiels: {
-                   required: true,
-                   digits: true
 
-               },
-               // compound rule
-               loyers_commerciaux: {
-                 required: true,
-                 digits: true
-               }
-               },
-                 messages: {
-               loyers_residentiels: {required: "Please enter a number" ,
-                   digits: "seulement les chiffres sont acceptes"
-                 }
-                 }
+                   loyers_residentiels: {
+                       required: true,
+                       digits: true
 
-          }   );
+                   },
+                   buanderie: {
+                       required: true,
+                       digits: true
+
+                   },
+                   stationnements: {
+                       required: true,
+                       digits: true
+
+                   },
+
+                   loyers_commerciaux: {
+                     required: true,
+                     digits: true
+                   }
+               },
+             messages: {
+                   loyers_residentiels: {
+                       required: "SVP entrez un nombre" ,
+                       digits: "Seulement les nombres sont acceptés"
+                    },
+                    loyers_commerciaux: {
+                        required: "SVP entrez un nombre" ,
+                        digits: "Seulement les nombres sont acceptés"
+                    },
+                     buanderie: {
+                       required: "SVP entrez un nombre" ,
+                       digits: "Seulement les nombres sont acceptés"
+                    },
+                    stationnements: {
+                        required: "SVP entrez un nombre" ,
+                        digits: "Seulement les nombres sont acceptés"
+                    }
+             }
+
+             });
 
                if  ($("#revenus_depenses").valid()){
-                       var value = $("#loyers_commerciaux").val();
-                       var value2 = $("#loyers_residentiels").val();
+                       var lc = parseInt($("#loyers_commerciaux").val());
+                       var lr = parseInt($("#loyers_residentiels").val());
+                       var bu = parseInt($("#buanderie").val());
+                       var sta = parseInt($("#stationnements").val());
 
-                      $("p").text(parseInt(value)+parseInt(value2));
+                      var ph = lc+lr+bu+sta;
+                   $("#revenu_potentiel_brut").val( ph);
 
                } else{
-                      $("p").text("0")
+                      var ph = "0"
+                   $("#revenu_potentiel_brut").val( ph);
 
                }
+
                      });
 
 
