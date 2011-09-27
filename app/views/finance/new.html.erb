@@ -25,13 +25,13 @@
         <div class="clearfix">
           <label for="buanderie">Buanderie:</label>
           <div class="input">
-          <input class="xlarge span2" id="buanderie" name="buanderie" size="30" type="text">
+          <input class="xlarge span2" id="buanderie" name="buanderie" size="30" type="text" value="0">
           </div>
         </div>
         <div class="clearfix">
           <label for="tationnements">Stationnements:</label>
           <div class="input">
-          <input class="xlarge span2" id="stationnements" name="stationnements" size="30" type="text">
+          <input class="xlarge span2" id="stationnements" name="stationnements" size="30" type="text" value="0">
           </div>
         </div>
         <div class="clearfix">
@@ -44,7 +44,58 @@
 
         </div>
 
+
+
+
+
+        </div>
+
+        <div id="finance_right">
+        <div class="clearfix">
+          <label for="administration">Administration:</label>
+          <div class="input">
+          <input class="xlarge span2" id="administration" name="administration" size="30" type="text" value="0">
+          </div>
+        </div>
+          <div class="clearfix">
+          <label for="p_mauvaises_creances">Pertes et mauvaises créances:</label>
+          <div class="input">
+          <input class="xlarge span2" id="p_mauvaises_creances" name="p_mauvaises_creances" size="30" type="text" value="0">
+
+
+          <a href="#" class="btn danger" rel="popover" title="ce nombre" data-content="ce nombre est le calcul du revenu net">?</a>
           <script>
+            $(function () {
+              $("a[rel=popover]")
+                .popover({
+                  offset: 10
+                })
+                .click(function(e) {
+                  e.preventDefault()
+                })
+            })
+          </script>
+            </div>
+        </div>
+        <div class="clearfix">
+          <label for="taxes_municipales">Taxes municipales:</label>
+          <div class="input">
+          <input class="xlarge span2" id="taxes_municipales" name="taxes_municipales" size="30" type="text" value="0">
+          </div>
+        </div>
+        <div class="clearfix">
+          <label for="taxes_scolaires">Taxes scolaires:</label>
+          <div class="input">
+          <input class="xlarge span2" id="taxes_scolaires" name="taxes_scolaires" size="30" type="text" value="0">
+          </div>
+        </div>
+        <div class="clearfix">
+          <label for="depenses_potentielles_brutes">Dépenses Potentielles Brutes:</label>
+          <div class="input">
+          <input class="xlarge span2 disabled" id="depenses_potentielles_brutes" name="depenses_potentielles_brutes" size="30" type="text"  disabled/>
+        </div>
+
+        <script>
 
              $("#revenus_depenses").change(function () {
 
@@ -73,6 +124,27 @@
                    loyers_commerciaux: {
                      required: true,
                      digits: true
+                   },
+
+                   administration: {
+                       required: true,
+                       digits: true
+
+                   },
+                   p_mauvaises_creances: {
+                       required: true,
+                       digits: true
+
+                   },
+                   taxes_municipales: {
+                       required: true,
+                       digits: true
+
+                   },
+
+                   taxes_scolaires: {
+                     required: true,
+                     digits: true
                    }
                },
              messages: {
@@ -91,7 +163,24 @@
                     stationnements: {
                         required: "SVP entrez un nombre" ,
                         digits: "Seulement les nombres sont acceptés"
+                    },
+                   administration: {
+                       required: "SVP entrez un nombre" ,
+                       digits: "Seulement les nombres sont acceptés"
+                    },
+                    p_mauvaises_creances: {
+                        required: "SVP entrez un nombre" ,
+                        digits: "Seulement les nombres sont acceptés"
+                    },
+                     taxes_municipales: {
+                       required: "SVP entrez un nombre" ,
+                       digits: "Seulement les nombres sont acceptés"
+                    },
+                    taxes_scolaires: {
+                        required: "SVP entrez un nombre" ,
+                        digits: "Seulement les nombres sont acceptés"
                     }
+
              }
 
              });
@@ -111,49 +200,29 @@
 
                }
 
+
+               if  ($("#revenus_depenses").valid()){
+                       var ad = parseInt($("#administration").val());
+                       var lr = parseInt($("#p_mauvaises_creances").val());
+                       var bu = parseInt($("#taxes_municipales").val());
+                       var sta = parseInt($("#taxes_scolaires").val());
+
+                      var dpb = ad+lr+bu+sta;
+                   $("#depenses_potentielles_brutes").val( dpb);
+
+               } else{
+                      var dpb = "0"
+                   $("#depenses_potentielles_brutes").val( dpb);
+
+               }
+
                      });
 
 
                     </script>
 
 
-
-        </div>
-        <div id="finance_right">
-        <div>
-          <label for="f1">f1:</label>
-          <%= text_field_tag :f1, params[:f1] %>
-        </div>
-        <div>
-          <label for="f2">f2:</label>
-
-          <%= text_field_tag :f2, params[:f2] %>
-          <a href="#" class="btn danger" rel="popover" title="ce nombre" data-content="ce nombre est le calcul du revenu net">?</a>
-          <script>
-            $(function () {
-              $("a[rel=popover]")
-                .popover({
-                  offset: 10
-                })
-                .click(function(e) {
-                  e.preventDefault()
-                })
-            })
-          </script>
-        </div>
-        <div>
-          <label for="f3">f3:</label>
-          <div class="input">
-              <input class="xlarge span2" id="xlInput" name="xlInput" size="30" type="text">
-          </div>
-        </div>
-        <div>
-          <label for="f4">result:</label>
-          <div class="input">
-               <input class="xlarge span2" id="xlInput2" name="xlInput" size="30" type="text">
-          </div>
-        </div>
-
+    </div>
 
 
     </fieldset>

@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3c58a98-d03c-4a2b-b692-dfa5c6299ac9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/finance.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/finance.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/finance/new.html.erb" afterPath="$PROJECT_DIR$/app/views/finance/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/stylesheets/bootstrap.css" afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/bootstrap.css" />
     </list>
     <ignored path="equipeimmobiliere.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,10 +30,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="new.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/finance/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="125" selection-start="1578" selection-end="1578" vertical-scroll-proportion="-7.5416665">
+            <state line="46" column="6" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.25503355">
               <folding />
             </state>
           </provider>
@@ -55,16 +51,16 @@
       <file leaf-file-name="finance.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/finance.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
+            <state line="17" column="13" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="bootstrap.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/assets/stylesheets/bootstrap.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="895" column="2" selection-start="15422" selection-end="15422" vertical-scroll-proportion="0.53535354">
+            <state line="895" column="2" selection-start="15422" selection-end="15422" vertical-scroll-proportion="-12.230769">
               <folding />
             </state>
           </provider>
@@ -132,10 +128,10 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/finance.css.scss" />
-        <option value="$PROJECT_DIR$/app/views/finance/new.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/bootstrap.css.scss" />
         <option value="$PROJECT_DIR$/vendor/assets/stylesheets/bootstrap.css" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/finance.css.scss" />
+        <option value="$PROJECT_DIR$/app/views/finance/new.html.erb" />
       </list>
     </option>
   </component>
@@ -892,13 +888,6 @@
         <state line="16" column="23" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/finance.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="129" column="9" selection-start="2305" selection-end="2308" vertical-scroll-proportion="-22.192308">
@@ -913,13 +902,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/finance/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="125" selection-start="1578" selection-end="1578" vertical-scroll-proportion="-7.5416665">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="893" column="2" selection-start="15339" selection-end="15352" vertical-scroll-proportion="-7.0384617">
@@ -929,7 +911,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/assets/stylesheets/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="895" column="2" selection-start="15422" selection-end="15422" vertical-scroll-proportion="0.53535354">
+        <state line="895" column="2" selection-start="15422" selection-end="15422" vertical-scroll-proportion="-12.230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/finance.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="13" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/finance/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="6" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.25503355">
           <folding />
         </state>
       </provider>
