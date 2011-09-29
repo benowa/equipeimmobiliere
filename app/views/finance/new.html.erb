@@ -7,9 +7,14 @@
 
 
 <%= form_tag '', :method => :get, :id => "revenus_depenses"  do %>
-    <fieldset>
+      <fieldset>
         <legend>Revenus / Dépenses</legend>
-        <div id="finance_left">
+      <div id="finance_left">
+
+
+
+        <legend class="legend_small">Revenus</legend>
+
         <div class="clearfix">
           <label for="loyers_residentiels">Loyers Résidentiels:</label>
           <div class="input">
@@ -39,42 +44,24 @@
           <div class="input">
           <input class="xlarge span2 disabled" id="revenu_potentiel_brut" name="revenu_potentiel_brut" size="30" type="text"  disabled/>
           </div>
-
-
-
         </div>
 
 
+        <legend class="legend_small">Dépenses</legend>
 
-
-
-        </div>
-
-        <div id="finance_right">
         <div class="clearfix">
           <label for="administration">Administration:</label>
           <div class="input">
           <input class="xlarge span2" id="administration" name="administration" size="30" type="text" value="0">
           </div>
         </div>
-          <div class="clearfix">
-          <label for="p_mauvaises_creances">Pertes et mauvaises créances:</label>
+        <div class="clearfix">
+          <label for="p_mauvaises_creances">Inoccupation et mauvaises créances:</label>
           <div class="input">
           <input class="xlarge span2" id="p_mauvaises_creances" name="p_mauvaises_creances" size="30" type="text" value="0">
 
 
-          <a href="#" class="btn danger" rel="popover" title="ce nombre" data-content="ce nombre est le calcul du revenu net">?</a>
-          <script>
-            $(function () {
-              $("a[rel=popover]")
-                .popover({
-                  offset: 10
-                })
-                .click(function(e) {
-                  e.preventDefault()
-                })
-            })
-          </script>
+
             </div>
         </div>
         <div class="clearfix">
@@ -90,16 +77,197 @@
           </div>
         </div>
         <div class="clearfix">
+          <label for="assurances">Assurances:</label>
+          <div class="input">
+          <input class="xlarge span2" id="assurances" name="assurances" size="30" type="text" value="0">
+          </div>
+        </div>
+         <div class="clearfix">
+          <label for="electricite">Électricité:</label>
+          <div class="input">
+          <input class="xlarge span2" id="electricite" name="electricite" size="30" type="text" value="0">
+          </div>
+        </div>
+         <div class="clearfix">
+          <label for="chauffage">Chauffage:</label>
+          <div class="input">
+          <input class="xlarge span2" id="chauffage" name="chauffage" size="30" type="text" value="0">
+          </div>
+        </div>
+        <div class="clearfix">
+          <label for="divers">Divers:</label>
+          <div class="input">
+          <input class="xlarge span2" id="divers" name="divers" size="30" type="text" value="0">
+            <a href="#" class="btn danger" rel="popover" title="Divers" data-content="Entretien, concièrge, déneigement, pelouse, location d'équipements, ...">?</a>
+            <script>
+            $(function () {
+              $("a[rel=popover]")
+                .popover({
+                  offset: 10
+                })
+                .click(function(e) {
+                  e.preventDefault()
+                })
+            })
+            </script>
+          </div>
+        </div>
+        <div class="clearfix">
           <label for="depenses_potentielles_brutes">Dépenses Potentielles Brutes:</label>
           <div class="input">
           <input class="xlarge span2 disabled" id="depenses_potentielles_brutes" name="depenses_potentielles_brutes" size="30" type="text"  disabled/>
         </div>
 
+
+
+      </div>
+
+        </div>
+
+           <legend class="column_2">Hypothèque</legend>
+           <div id="finance_center">
+
+
+
+              <div class="clearfix">
+                <label for="prix_achat">Prix d'achat:</label>
+                <div class="input">
+                    <input class="xlarge span2" id="prix_achat" name="prix_achat" size="30" type="text" value="0">
+                </div>
+              </div>
+              <div class="clearfix">
+                <label for="mise_fond">Mise de fond:</label>
+                <div class="input">
+                    <input class="xlarge span2" id="mise_fond" name="mise_fond" size="30" type="text" value="0">
+                </div>
+              </div>
+              <div class="clearfix">
+                <label for="montant_hypotheque">Montant de l'hypothèque:</label>
+                <div class="input">
+                    <input class="xlarge span2 disabled" id="montant_hypotheque" name="montant_hypotheque" size="30" type="text" disabled/>
+                </div>
+              </div>
+
+              <div class="clearfix">
+                <label for="terme">Terme:</label>
+                <div class="input">
+                    <input class="xlarge span2" id="terme" name="terme" size="30" type="text" value="0">
+                </div>
+              </div>
+
+               <div class="clearfix">
+                <label for="amortissement">Amortissement:</label>
+                <div class="input">
+                    <input class="xlarge span2" id="amortissement" name="amortissement" size="30" type="text" value="0">
+                </div>
+              </div>
+
+              <div class="clearfix">
+                <label for="paiement_mensuel">Paiement mensuel:</label>
+                <div class="input">
+                    <input class="xlarge span2 disabled" id="paiement_mensuel" name="paiement_mensuel" size="30" type="text" disabled/>
+                </div>
+              </div>
+
+              <div class="clearfix">
+                <label for="paiement_capital_annuel">Paiement de capital annuel:</label>
+                <div class="input">
+                    <input class="xlarge span2 disabled" id="paiement_capital_annuel" name="paiement_capital_annuel" size="30" type="text" disabled/>
+                </div>
+              </div>
+
+             <div class="clearfix">
+                <label for="paiement_interets_annuel">Paiement intérêts annuel:</label>
+                <div class="input">
+                    <input class="xlarge span2 disabled" id="paiement_interets_annuel" name="paiement_interets_annuel" size="30" type="text" disabled/>
+                </div>
+              </div>
+
+             <div class="clearfix">
+                <label for="paiement_annuel">Paiement annuel:</label>
+                <div class="input">
+                    <input class="xlarge span2 disabled" id="paiement_annuel" name="paiement_annuel" size="30" type="text" disabled/>
+                </div>
+              </div>
+
+        </div>
+
+        <legend class="column_2">3e colonne</legend>
+        <div id="finance_right">
+          <div class="clearfix">
+                <label for="prix_achat">Prix d'achat:</label>
+                <div class="input">
+                    <input class="xlarge span2" id="prix_acha" name="prix_achat" size="30" type="text" value="0">
+                </div>
+              </div>
+              <div class="clearfix">
+                <label for="mise_fond">Mise de fond:</label>
+                <div class="input">
+                    <input class="xlarge span2" id="mise_fon" name="mise_fond" size="30" type="text" value="0">
+                </div>
+              </div>
+              <div class="clearfix">
+                <label for="montant_hypotheque">Montant de l'hypothèque:</label>
+                <div class="input">
+                    <input class="xlarge span2 disabled" id="montant_hypothequ" name="montant_hypotheque" size="30" type="text" disabled/>
+                </div>
+              </div>
+
+              <div class="clearfix">
+                <label for="terme">Terme:</label>
+                <div class="input">
+                    <input class="xlarge span2" id="term" name="terme" size="30" type="text" value="0">
+                </div>
+              </div>
+
+               <div class="clearfix">
+                <label for="amortissement">Amortissement:</label>
+                <div class="input">
+                    <input class="xlarge span2" id="amortissemen" name="amortissement" size="30" type="text" value="0">
+                </div>
+              </div>
+
+              <div class="clearfix">
+                <label for="paiement_mensuel">Paiement mensuel:</label>
+                <div class="input">
+                    <input class="xlarge span2 disabled" id="paiement_mensue" name="paiement_mensuel" size="30" type="text" disabled/>
+                </div>
+              </div>
+
+              <div class="clearfix">
+                <label for="paiement_capital_annuel">Paiement de capital annuel:</label>
+                <div class="input">
+                    <input class="xlarge span2 disabled" id="paiement_capital_annue" name="paiement_capital_annuel" size="30" type="text" disabled/>
+                </div>
+              </div>
+
+             <div class="clearfix">
+                <label for="paiement_interets_annuel">Paiement intérêts annuel:</label>
+                <div class="input">
+                    <input class="xlarge span2 disabled" id="paiement_interets_annue" name="paiement_interets_annuel" size="30" type="text" disabled/>
+                </div>
+              </div>
+
+             <div class="clearfix">
+                <label for="paiement_annuel">Paiement annuel:</label>
+                <div class="input">
+                    <input class="xlarge span2 disabled" id="paiement_annue" name="paiement_annuel" size="30" type="text" disabled/>
+                </div>
+              </div>
+        </div>
+
+      </fieldset>
+
+
+
+
         <script>
 
-             $("#revenus_depenses").change(function () {
 
 
+
+
+            $("#revenus_depenses").change(function () {
 
              $("#revenus_depenses").validate( {
 
@@ -145,7 +313,48 @@
                    taxes_scolaires: {
                      required: true,
                      digits: true
+                   },
+
+                   assurances: {
+                     required: true,
+                     digits: true
+                   },
+
+                   electricite: {
+                     required: true,
+                     digits: true
+                   },
+
+                   chauffage: {
+                     required: true,
+                     digits: true
+                   },
+
+                   divers: {
+                     required: true,
+                     digits: true
+                   },
+
+                   prix_achat: {
+                     required: true,
+                     digits: true
+                   },
+
+                   mise_fond: {
+                     required: true,
+                     digits: true
+                   },
+
+                   terme: {
+                     required: true,
+                     digits: true
+                   },
+
+                   amortissement: {
+                     required: true,
+                     digits: true
                    }
+
                },
              messages: {
                    loyers_residentiels: {
@@ -179,6 +388,46 @@
                     taxes_scolaires: {
                         required: "SVP entrez un nombre" ,
                         digits: "Seulement les nombres sont acceptés"
+                    },
+
+                    assurances: {
+                        required: "SVP entrez un nombre" ,
+                        digits: "Seulement les nombres sont acceptés"
+                    },
+
+                    electricite: {
+                        required: "SVP entrez un nombre" ,
+                        digits: "Seulement les nombres sont acceptés"
+                    },
+
+                    chauffage: {
+                        required: "SVP entrez un nombre" ,
+                        digits: "Seulement les nombres sont acceptés"
+                    },
+
+                    divers: {
+                        required: "SVP entrez un nombre" ,
+                        digits: "Seulement les nombres sont acceptés"
+                    },
+
+                    prix_achat: {
+                        required: "SVP entrez un nombre" ,
+                        digits: "Seulement les nombres sont acceptés"
+                    },
+
+                    mise_fond: {
+                        required: "SVP entrez un nombre" ,
+                        digits: "Seulement les nombres sont acceptés"
+                    },
+
+                    terme: {
+                        required: "SVP entrez un nombre" ,
+                        digits: "Seulement les nombres sont acceptés"
+                    },
+
+                    amortissement: {
+                        required: "SVP entrez un nombre" ,
+                        digits: "Seulement les nombres sont acceptés"
                     }
 
              }
@@ -206,13 +455,30 @@
                        var lr = parseInt($("#p_mauvaises_creances").val());
                        var bu = parseInt($("#taxes_municipales").val());
                        var sta = parseInt($("#taxes_scolaires").val());
+                       var ass = parseInt($("#assurances").val());
+                       var ele = parseInt($("#electricite").val());
+                       var cha = parseInt($("#chauffage").val());
+                       var div = parseInt($("#divers").val());
 
-                      var dpb = ad+lr+bu+sta;
+                      var dpb = ad+lr+bu+sta+ass+ele+cha+div;
                    $("#depenses_potentielles_brutes").val( dpb);
 
                } else{
                       var dpb = "0"
                    $("#depenses_potentielles_brutes").val( dpb);
+
+               }
+
+               if  ($("#revenus_depenses").valid()){
+                       var pa = parseInt($("#prix_achat").val());
+                       var mf = parseInt($("#mise_fond").val());
+
+                      var mh = pa-mf;
+                   $("#montant_hypotheque").val( mh);
+
+               } else{
+                      var mh = "0"
+                   $("#montant_hypotheque").val( mh);
 
                }
 
@@ -222,10 +488,13 @@
                     </script>
 
 
-    </div>
 
 
-    </fieldset>
+
+
+
+
+
 <% end %>
 
 

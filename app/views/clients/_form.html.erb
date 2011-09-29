@@ -1,7 +1,7 @@
 <%= form_for(@client) do |f| %>
 
 
-  <fieldset>
+  <fieldset class="email_fieldset">
   <legend>To obtain a pdf summary by email</legend>
   <div class="field">
     <%= f.label :name %><br />
@@ -11,6 +11,7 @@
     <%= f.label :email %><br />
     <%= f.email_field :email, size: 40 %>
   </div>
+
   <div class="actions">
     <%= submit_tag "Send email" %>
   </div>
@@ -33,4 +34,7 @@
 
   </fieldset>
 
+
 <% end %>
+
+       <%= image_tag("logo_equipe.jpg")%>

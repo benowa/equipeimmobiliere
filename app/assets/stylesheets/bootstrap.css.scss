@@ -577,6 +577,10 @@ fieldset {
   margin-bottom: 18px;
   padding-top: 18px;
 }
+
+.email_fieldset {
+}
+
 fieldset legend {
   display: block;
   padding-left: 150px;
@@ -588,8 +592,20 @@ fieldset legend {
 
   *line-height: 1.5;
   /* IE6-7 */
+}
+
+.column_2{
+    float: left;
+    margin-top:-44px;
 
 }
+
+.legend_small{
+    font-size: 12.5px;
+    margin-bottom: 10px;
+
+}
+
 form .clearfix {
   margin-bottom: 18px;
   zoom: 1;
@@ -1235,6 +1251,7 @@ table .headerSortUp.purple, table .headerSortDown.purple {
   right: 0;
   z-index: 10000;
   overflow: visible;
+
 }
 .topbar a {
   color: #bfbfbf;
@@ -1258,6 +1275,10 @@ table .headerSortUp.purple, table .headerSortDown.purple {
   font-size: 20px;
   font-weight: 200;
   line-height: 1;
+}
+
+.topbar .brand1{
+   color: #e11923;
 }
 
 .brand2{
