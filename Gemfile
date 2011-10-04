@@ -18,7 +18,7 @@ end
 
 gem 'jquery-rails'
 gem "prawn", "0.8.4"
-gem 'pdf_renderer', :git => "git@github.com:benowa/pdf_renderer.git"
+gem 'pdf_renderer', :git => "git://github.com/benowa/pdf_renderer.git"
 
 group :production do
   gem 'therubyracer-heroku', '0.8.1.pre3' # you will need this too

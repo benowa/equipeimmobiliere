@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:benowa/pdf_renderer.git
+  remote: git://github.com/benowa/pdf_renderer.git
   revision: 02886d246d7cc15d7ebabd85273e0acc99d725f9
   specs:
     pdf_renderer (0.0.1)
