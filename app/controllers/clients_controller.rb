@@ -47,8 +47,10 @@ class ClientsController < ApplicationController
       if @client.save
         ClientNotifier.summary(@client).deliver
 
+
         format.html { redirect_to finance_url, notice: 'Thks, you will receive an email promptly.' }
         format.json { render json: @client, status: :created, location: @client }
+
       else
         format.html { render  "finance/new" }
         format.json { render json: @client.errors, status: :unprocessable_entity }

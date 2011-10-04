@@ -1,8 +1,11 @@
 Equipeimmobiliere::Application.routes.draw do
+  get "pdf/index"
+
   resources :clients
 
   get 'admin' => 'admin#index'
   get 'finance' => 'finance#new'
+  get 'pdf' => 'pdf#index'
 
   controller :sessions do
     get 'login' => :new

@@ -16,6 +16,9 @@
     <%= submit_tag "Send email" %>
   </div>
 
+    <p><%= link_to "PDF", pdf_path("pdf") %></p>
+
+
     <% if notice %>
       <p id="notice"><%= notice %></p>
     <% end %>
