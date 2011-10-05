@@ -14,6 +14,5 @@ class ClientNotifier < ActionMailer::Base
 
 
 
-
   end
 end

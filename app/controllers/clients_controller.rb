@@ -45,10 +45,12 @@ class ClientsController < ApplicationController
 
     respond_to do |format|
       if @client.save
+
+
         ClientNotifier.summary(@client).deliver
+        format.html {render :pdf => "#{@client.name}", :template => "pdf/index.pdf"}
 
-
-        format.html { redirect_to finance_url, notice: 'Thks, you will receive an email promptly.' }
+       # format.html { redirect_to finance_url, notice: 'Thks, you will receive an email promptly.' }
         format.json { render json: @client, status: :created, location: @client }
 
       else

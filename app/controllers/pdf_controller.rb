@@ -3,7 +3,5 @@ class PdfController < ApplicationController
   def index
     respond_to do |format|
      format.pdf { render :pdf => "contents" }
-    end
-  end
 
 end
