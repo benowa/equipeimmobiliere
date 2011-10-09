@@ -5,11 +5,15 @@
   <legend>Pour obtenir un résumé format pdf</legend>
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name, size: 40 %>
+
+        <%= f.text_field :name, name: "client_name", size: 40 %>
+
   </div>
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, size: 40 %>
+
+        <%= f.text_field :email, name: "client_email", size: 40 %>
+
   </div>
 
   <div class="actions">
@@ -34,7 +38,42 @@
 
   </fieldset>
 
+   <script>
+
+   $("#new_client").change(function () {
+
+             $("#new_client").validate( {
+
+             rules: {
+
+                   client_email: {
+                       required: true,
+                       email: true
+                   },
+
+                   client_name: {
+                       required: true
+                   }
+
+              },
+             messages: {
+                   client_email: {
+                        required: "SVP entrez votre e-mail" ,
+                        email: "L'adresse e-mail n'est pas valide"
+                    },
+
+                   client_name: {
+                       required: "SVP entrez votre nom"
+                    }
+
+              }
+
+              });
+
+   });
+   </script>
 
 <% end %>
 
        <%= image_tag("logo_equipe.jpg")%>
+
